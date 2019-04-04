@@ -36,6 +36,8 @@ public class AnagrammiController {
 
     @FXML
     void docalcolaanagrammi(ActionEvent event) {
+    	testoriscorretti.clear();
+    	testoriserrati.clear();
  String s=testoparola.getText();
 listaana= modello.getAnagrammi(s);
 for(String a:listaana) {

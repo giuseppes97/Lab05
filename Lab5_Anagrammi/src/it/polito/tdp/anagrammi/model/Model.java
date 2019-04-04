@@ -39,8 +39,9 @@ private void trovaAnagrammiRicorsione(String parola, int livello, String parzial
 	
 	if(livello==parola.length()) {
 		if(dao.isCorrect(parziale))
-		{listanagra.add(parziale);}
-		else {listaerrati.add(parziale);}
+		{   if(listanagra.contains(parziale)==false)
+			listanagra.add(parziale);}
+		else {if(listaerrati.contains(parziale)==false) listaerrati.add(parziale);}
 		return;
 	}
 	 

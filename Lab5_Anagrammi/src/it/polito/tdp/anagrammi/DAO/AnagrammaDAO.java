@@ -22,10 +22,10 @@ public boolean isCorrect(String anagramma) {
 		PreparedStatement st = conn.prepareStatement(sql);
          st.setString(1, anagramma);
 		ResultSet rs = st.executeQuery();
-
-		if(rs.next()) {return true;}
         
-		else return false;
+		if(rs.next()) {conn.close();    return true;}
+        
+		else {conn.close(); return false;}
 
 	} catch (SQLException e) {
 		// e.printStackTrace();
