@@ -41,6 +41,11 @@ listaana= modello.getAnagrammi(s);
 for(String a:listaana) {
 	testoriscorretti.appendText(a+"\n");
 }
+listaana.clear();
+listaana=modello.getErrati();
+for(String a:listaana) {
+	testoriserrati.appendText(a+"\n");
+}
     }
 
     @FXML
